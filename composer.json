@@ -1,0 +1,22 @@
+{
+    "name": "di-space/yandex-stt",
+    "description": "Пакет Laravel для распознавания речи в Yandex SpeechKit",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitriy Space",
+            "email": "correl2006@yandex.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.2",
+        "laravel/framework": "^5.5",
+        "guzzlehttp/guzzle": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "DiSpace\\YandexSST\\": "src/"
+        }
+    }
+}
