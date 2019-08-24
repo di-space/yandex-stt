@@ -8,7 +8,7 @@
             "email": "correl2006@yandex.ru"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.2",
         "laravel/framework": "^5.5",
