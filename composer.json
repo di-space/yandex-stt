@@ -22,10 +22,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DiSpace\\YandexSTTServiceProvider"
+                "DiSpace\\YandexSST\\YandexSTTServiceProvider"
             ],
             "aliases": {
-                "YandexSTT": "DiSpace\\YandexSTTFacade"
+                "YandexSTT": "DiSpace\\YandexSST\\YandexSTTFacade"
             }
         }
     }
