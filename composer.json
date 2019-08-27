@@ -16,16 +16,16 @@
     },
     "autoload": {
         "psr-4": {
-            "DiSpace\\YandexSST\\": "src/"
+            "DiSpace\\YandexSTT\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "DiSpace\\YandexSST\\YandexSTTServiceProvider"
+                "DiSpace\\YandexSTT\\YandexSTTServiceProvider"
             ],
             "aliases": {
-                "YandexSTT": "DiSpace\\YandexSST\\YandexSTTFacade"
+                "YandexSTT": "DiSpace\\YandexSTT\\YandexSTTFacade"
             }
         }
     }
