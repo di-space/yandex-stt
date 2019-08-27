@@ -18,5 +18,15 @@
         "psr-4": {
             "DiSpace\\YandexSST\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DiSpace\\YandexSTTServiceProvider"
+            ],
+            "aliases": {
+                "YandexSTT": "DiSpace\\YandexSTTFacade"
+            }
+        }
     }
 }
