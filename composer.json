@@ -1,6 +1,6 @@
 {
     "name": "di-space/yandex-stt",
-    "description": "Пакет Laravel для распознавания речи в Yandex SpeechKit",
+    "description": "PHP Yandex SpeechKit",
     "license": "MIT",
     "authors": [
         {
