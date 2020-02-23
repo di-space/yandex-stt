@@ -1,12 +1,12 @@
 <?php
 
 
-namespace DiSpace\YandexSTT\Yandex;
+namespace DiSpace\YandexSTT\Request;
 
 
 /**
  * Interface ParamsInterface
- * @package DiSpace\YandexSTT\Yandex
+ * @package DiSpace\YandexSTT\Request
  */
 interface SpeechParamsInterface
 {

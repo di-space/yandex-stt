@@ -1,7 +1,7 @@
 <?php
 
 
-namespace DiSpace\YandexSTT\Yandex;
+namespace DiSpace\YandexSTT\Request;
 
 use RestClient;
 use Exception;

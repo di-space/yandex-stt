@@ -2,7 +2,7 @@
 
 namespace DiSpace\YandexSTT;
 
-use DiSpace\YandexSTT\Yandex\SpeechRequest;
+use DiSpace\YandexSTT\Request\SpeechRequest;
 use \RestClientException;
 
 /**
