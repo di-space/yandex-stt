@@ -27,18 +27,21 @@ class SpeechRequest implements SpeechRequestInterface
     /**
      * @var string
      */
-    protected $folder_id = '';
+    protected $folder_id = false;
 
     /**
      * Request constructor.
      * @param string $token
-     * @param string $folder_id
+     * @param string|bool $folder_id
      * @param mixed|string $base_query
      */
-    public function __construct(string $token, string $folder_id, $base_query  = false)
+    public function __construct(string $token, $folder_id  = false, $base_query  = false)
     {
         $this->token = $token;
-        $this->folder_id = $folder_id;
+
+        if($folder_id !== false){
+            $this->folder_id = $folder_id;
+        }
         if($base_query !== false){
             $this->base_query = $base_query;
         }

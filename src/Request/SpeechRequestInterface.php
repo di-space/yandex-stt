@@ -28,10 +28,10 @@ interface SpeechRequestInterface extends SpeechParamsInterface
     /**
      * SpeechRequestInterface constructor.
      * @param string $token
-     * @param string $folder_id
+     * @param string|bool  $folder_id
      * @param bool $base_query
      */
-    public function __construct(string $token, string $folder_id, $base_query  = false);
+    public function __construct(string $token, $folder_id  = false, $base_query  = false);
 
     /**
      * @param string $content
