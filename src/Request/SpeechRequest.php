@@ -65,7 +65,7 @@ class SpeechRequest implements SpeechRequestInterface
             ]
         ]);
 
-        $result = $yandex_api->post("stt:recognize?" . $query_string, $content);
+        $result = $yandex_api->post('stt:recognize?' . $query_string, $content);
         $response = $result->decode_response();
 
         if(isset($response->error_code)){
