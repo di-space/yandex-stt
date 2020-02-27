@@ -27,19 +27,19 @@ class SpeechRequest implements SpeechRequestInterface
     /**
      * @var string
      */
-    protected $folder_id = false;
+    protected $folder_id = '';
 
     /**
      * Request constructor.
      * @param string $token
-     * @param string|bool $folder_id
+     * @param string $folder_id
      * @param mixed|string $base_query
      */
-    public function __construct(string $token, $folder_id  = false, $base_query  = false)
+    public function __construct(string $token, string $folder_id  = '', $base_query  = false)
     {
         $this->token = $token;
 
-        if($folder_id !== false){
+        if($folder_id !== ''){
             $this->folder_id = $folder_id;
         }
         if($base_query !== false){
@@ -104,7 +104,7 @@ class SpeechRequest implements SpeechRequestInterface
      */
     public function getFolderId() : string
     {
-        return $this->folder_id;
+        return $this->folder_id ?? '';
     }
 
     /**
@@ -126,9 +126,14 @@ class SpeechRequest implements SpeechRequestInterface
             'topic' => $params['topic'] ?? self::DEFAULT_TOPIC,
             'profanityFilter' => $params['profanity_filter'] ?? self::DEFAULT_PROFANITY_FILTER,
             'format' => $params['format'] ?? self::DEFAULT_FORMAT,
-            'sampleRateHertz' => $params['sample_rh'] ?? self::DEFAULT_SAMPLE_RH,
-            'folderId' => $this->getFolderId(),
+            'sampleRateHertz' => $params['sample_rh'] ?? self::DEFAULT_SAMPLE_RH
         ];
+
+        $folderId = $this->getFolderId();
+        if(trim($folderId) !== ''){
+            $query_params['folderId'] = $folderId;
+        }
+
 
         return http_build_query($query_params);
     }
